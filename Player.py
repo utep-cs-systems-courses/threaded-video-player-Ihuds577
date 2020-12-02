@@ -60,7 +60,7 @@ class CovertToGrayScale(Thread):
                 frame = frameQueue.getFrame()
 
                 if type(frame) == int and frame == -1:
-                    grayScaleQueue.insertFrame(-1)
+                    grayScaleQueue.putFrame(-1)
                     break
                 print(f'Converting Frame {self.count}')
                 grayscaleFrame = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
